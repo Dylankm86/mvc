@@ -1,20 +1,22 @@
 <?php
 
-class user{
+class  person{
     public $name;
-    public $lastname;
+    public $age;
+    public $address;
 
-    public function name(){
-        echo "hello dylan";
+    function __construct($name,$age,$address){
+        $this->name = $name;
+        $this->age = $age;
+        $this->address = $address;
+        
     }
-    public function lastname(){
-        echo "kishoen misier";
+    public function introduce(){
+        echo "hello my name is {$this->name} and i am {$this->age} years old and live on{$this->address}";
     }
 }
 
-$names = new user;
+$person = new person("Dylan", "16", "123st");
 
-$names->name = 'dylan';
-$names->lastname = 'kishoen misier';
-
-$names->name ();
+$person->introduce();
+ 
